@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+.h1{
+ font-family: 'Noto Sans JP', sans-serif;   
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: rgb(205, 221, 218);
+  background-size: cover;
+}
+.search-box {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
