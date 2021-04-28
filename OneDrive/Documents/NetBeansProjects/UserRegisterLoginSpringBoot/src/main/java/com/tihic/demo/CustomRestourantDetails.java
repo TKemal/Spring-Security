@@ -13,8 +13,9 @@ public class CustomRestourantDetails implements UserDetails {
         this.restaurant = restaurant;
     }
 
+
     CustomRestourantDetails(User restaurant) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.restaurant = new Restaurant();
     }
     
     

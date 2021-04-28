@@ -32,11 +32,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr th:each="user: ${listUsers}">
-                                        <td th:text="${user.id}">User ID</td>
-                                        <td th:text="${user.email}">User Email</td>
-                                        <td th:text="${user.firstName}">User Name</td>
-                                        <td th:text="${user.lastName}">User Surname</td>
+                                    <tr th:each="restaurant: ${listRestaurant}">
+                                        <td th:text="${restaurant.id}">Restaurant ID</td>
+                                        <td th:text="${restaurant.email}">Restaurant Email</td>
+                                        <td th:text="${restaurant.userName}">Restaurant</td>
+                                        <td th:text="${restaurant.phoneNumber}">Phone Number</td>
                                     </tr>
                                 </tbody>
                             </table>

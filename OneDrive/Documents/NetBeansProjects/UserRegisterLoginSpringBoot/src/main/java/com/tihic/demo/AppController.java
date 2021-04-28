@@ -48,14 +48,14 @@ public class AppController {
     public String viewUsersList(Model model) {
         List<User> listUsers = repo.findAll();
         model.addAttribute("listUsers", listUsers);
-        return "fastfood_order_page";
+        return "users";
     }
 
-    /*@GetMapping("/list_restaurant")
+    @GetMapping("/list_restaurant")
     public String viewRestourantList(Model model) {
         List<Restaurant> listRestaurant = repository.findAll();
         model.addAttribute("listRestaurant", listRestaurant);
 
         return "fastfood_order_page";
-    }*/
+    }
 }

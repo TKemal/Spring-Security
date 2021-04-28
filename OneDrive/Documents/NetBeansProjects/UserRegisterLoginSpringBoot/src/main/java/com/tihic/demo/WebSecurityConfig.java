@@ -42,13 +42,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/list_users").authenticated()
+                .antMatchers("/list_restaurant").authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/login")//Dodano
-                .usernameParameter("username") 
-                .defaultSuccessUrl("/list_users")
+                .usernameParameter("username")
+                .defaultSuccessUrl("/list_restaurant")
                 .permitAll()
                 .and()
                 .logout()

@@ -1,5 +1,6 @@
 package com.tihic.demo;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,11 +15,15 @@ public class CustomRestourantDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
-       User restaurant = repository.findByName(userName);
+       User restaurant = (User) repository.findAll();
         if(restaurant == null){
         throw new UnsupportedOperationException("Not supported yet."); 
         }
         return new CustomRestourantDetails(restaurant);
     }
     
+    public UserDetails findAll(){
+        List allRest = repository.findAll();
+        return (UserDetails) allRest;
+    }
 }
